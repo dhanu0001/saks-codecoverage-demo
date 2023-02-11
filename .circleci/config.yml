@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:8-jdk
+      - image: circleci/openjdk:11.0.10-jdk
       # - image: circleci/node:14
     # environment:
     #   SONAR_TOKEN: eea8bec81489972faf09e2fba4048155f45adab7
