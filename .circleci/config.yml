@@ -41,7 +41,8 @@ jobs:
             cd /home/circleci/project/
             # mvn test
             mvn checkstyle:checkstyle
-            apt-get install -y openjdk-11-jdk
+            ls -lrt /home/circleci/project/target/maven-status
+
             # mvn install -DskipTests
             # mvn sonar:sonar
             # ls -lrt /home/circleci/project/target/maven-status
