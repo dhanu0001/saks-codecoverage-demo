@@ -42,7 +42,7 @@ jobs:
             cd /home/circleci/project/
             mvn clean package
             mvn checkstyle:checkstyle
-            ls -lrt /home/circleci/project/target/checkstyle-result.xml
+            ls -lrt /home/circleci/project/target/
 
             # mvn install -DskipTests
             # mvn sonar:sonar
