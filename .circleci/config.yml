@@ -48,5 +48,5 @@ jobs:
               -Dsonar.login=eea8bec81489972faf09e2fba4048155f45adab7 \
               -Dsonar.organization=dhanu0001 \
               -Dsonar.projectKey=dhanu0001 \
-              -Dsonar.sources=. \
+              # -Dsonar.sources=. \
               -Dsonar.host.url=https://sonarcloud.io
