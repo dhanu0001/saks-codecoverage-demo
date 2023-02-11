@@ -39,7 +39,7 @@ jobs:
             unzip sonar-scanner-cli-4.5.0.2216-linux.zip
             rm sonar-scanner-cli-4.5.0.2216-linux.zip
             mvn install -DskipTests
-            ls -lrt /home/circleci/project/target/test-classes/com
+            ls -lrt /home/circleci/project/target/test-classes/com/visualpathit
       - run:
           name: Analyze with SonarCloud
           command: |
