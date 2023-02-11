@@ -22,12 +22,10 @@ jobs:
             # mvn sonar:sonar -Dsonar.login=eea8bec81489972faf09e2fba4048155f45adab7 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=dhanu0001 -Dsonar.organization=dhanu0001 -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ -Dsonar.junit.reportsPath=target/surefire-reports/ -Dsonar.jacoco.reportsPath=target/jacoco.exec -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
             # curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=dhanu0001 >result.json
 
-      - run:
-          name: Scan with SonarCloud
+       - run:
+          name: Install SonarCloud CLI
           command: |
-            sonar-scanner \
-              -Dsonar.login=$SONAR_TOKEN \
-              -Dsonar.organization=$SONAR_ORGANIZATION \
-              -Dsonar.projectKey=$SONAR_PROJECT_KEY \
-              -Dsonar.sources=. \
-              -Dsonar.host.url=https://sonarcloud.io
+            curl -LJO https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.5.0.2216-linux.zip
+            unzip sonar-scanner-cli-4.5.0.2216-linux.zip
+            rm sonar-scanner-cli-4.5.0.2216-linux.zip
+            export PATH=$PATH:$PWD/sonar-scanner-4.5.0.2216-linux/bin
