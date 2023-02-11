@@ -41,11 +41,11 @@ jobs:
             cd /home/circleci/project/
             # mvn test
             mvn checkstyle:checkstyle
-            ls -lrt /home/circleci/project/target/maven-status
+            ls -lrt /home/circleci/project/
 
             # mvn install -DskipTests
             # mvn sonar:sonar
-            # ls -lrt /home/circleci/project/target/maven-status
+            # ls -lrt /home/circleci/project/
       - run:
           name: Analyze with SonarCloud
           command: |
