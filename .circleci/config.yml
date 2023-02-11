@@ -5,9 +5,9 @@ jobs:
     docker:
       - image: circleci/node:14
     environment:
-      SONAR_TOKEN: ${SONAR_TOKEN}
-      SONAR_PROJECT_KEY: ${SONAR_PROJECT_KEY}
-      SONAR_ORGANIZATION: ${SONAR_ORGANIZATION}
+      SONAR_TOKEN: eea8bec81489972faf09e2fba4048155f45adab7
+      SONAR_PROJECT_KEY: dhanu001
+      SONAR_ORGANIZATION: dhanu001
     steps:
       - checkout
       - run:
@@ -27,8 +27,8 @@ jobs:
           name: Scan with SonarCloud
           command: |
             sonar-scanner \
-              -Dsonar.login=$SONAR_TOKEN \
-              -Dsonar.organization=$SONAR_ORGANIZATION \
-              -Dsonar.projectKey=$SONAR_PROJECT_KEY \
+              -Dsonar.login=eea8bec81489972faf09e2fba4048155f45adab7 \
+              -Dsonar.organization=dhanu001 \
+              -Dsonar.projectKey=dhanu001 \
               -Dsonar.sources=. \
-              -Dsonar.host.url=https://sonarcloud.io 
+              -Dsonar.host.url=https://sonarcloud.io
