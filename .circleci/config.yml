@@ -30,17 +30,15 @@ jobs:
       #     name: Run tests
       #     command: npm test
       - run:
-          name: Install SonarCloud CLI
+          name: Install SonarScanner
           command: |
             wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.5.0.2216-linux.zip
             unzip sonar-scanner-cli-4.5.0.2216-linux.zip
             rm sonar-scanner-cli-4.5.0.2216-linux.zip
       - run:
-          name: Scan with SonarCloud
+          name: Analyze with SonarCloud
           command: |
-            cd /home/circleci/project/
-            ls -lrt /home/circleci/project/
-            sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner \
+            ./sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner \
               -Dsonar.projectKey=dhanu0001 \
               -Dsonar.organization=dhanu0001 \
               -Dsonar.sources=. \
