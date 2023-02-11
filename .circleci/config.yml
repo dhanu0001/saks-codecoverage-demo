@@ -45,7 +45,7 @@ jobs:
           command: |
             cd /home/circleci/project/
             ls -lrt /home/circleci/project/
-            ./sonar-scanner \
+            sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner \
               -Dsonar.login=eea8bec81489972faf09e2fba4048155f45adab7 \
               -Dsonar.organization=dhanu0001 \
               -Dsonar.projectKey=dhanu0001 \
