@@ -59,4 +59,4 @@ jobs:
               -Dsonar.login=$Sonar_Token \
               -Dsonar.sources=src/main/java/ \
               -Dsonar.java.binaries=target/classes
-              ls -lrt /home/circleci/project/target/site
+              cat /home/circleci/project/target/site/checkstyle.html
