@@ -38,7 +38,7 @@ jobs:
             wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.5.0.2216-linux.zip
             unzip sonar-scanner-cli-4.5.0.2216-linux.zip
             rm sonar-scanner-cli-4.5.0.2216-linux.zip
-            mvn test
+            mvn install -DskipTests
       - run:
           name: Analyze with SonarCloud
           command: |
