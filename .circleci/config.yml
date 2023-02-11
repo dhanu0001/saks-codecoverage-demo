@@ -7,8 +7,9 @@ jobs:
       - image: circleci/node:14
     environment:
       SONAR_TOKEN: eea8bec81489972faf09e2fba4048155f45adab7
-      SONAR_PROJECT_KEY: dhanu001
-      SONAR_ORGANIZATION: dhanu001
+      SONAR_PROJECT_KEY: dhanu0001
+      SONAR_ORGANIZATION: dhanu0001
+
     steps:
       - checkout
       # - run:
@@ -31,7 +32,7 @@ jobs:
             ls -lrt /home/circleci/project/
             ./sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner \
               -Dsonar.login=eea8bec81489972faf09e2fba4048155f45adab7 \
-              -Dsonar.organization=dhanu001 \
-              -Dsonar.projectKey=dhanu001 \
+              -Dsonar.organization=dhanu0001 \
+              -Dsonar.projectKey=dhanu0001 \
               -Dsonar.sources=. \
               -Dsonar.host.url=https://sonarcloud.io
