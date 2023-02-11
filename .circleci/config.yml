@@ -19,9 +19,9 @@ jobs:
             export PATH=$PATH:/sonar-scanner-3.3.0.1492-linux/bin/
             mvn test
             mvn checkstyle:checkstyle
-            mvn sonar:sonar -Dsonar.login=eea8bec81489972faf09e2fba4048155f45adab7 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=dhanu0001 -Dsonar.organization=dhanu0001 -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ -Dsonar.junit.reportsPath=target/surefire-reports/ -Dsonar.jacoco.reportsPath=target/jacoco.exec -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
-            curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=dhanu0001 >result.json
-            
+            # mvn sonar:sonar -Dsonar.login=eea8bec81489972faf09e2fba4048155f45adab7 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=dhanu0001 -Dsonar.organization=dhanu0001 -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ -Dsonar.junit.reportsPath=target/surefire-reports/ -Dsonar.jacoco.reportsPath=target/jacoco.exec -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
+            # curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=dhanu0001 >result.json
+
       - run:
           name: Run SonarScanner
           command: |
