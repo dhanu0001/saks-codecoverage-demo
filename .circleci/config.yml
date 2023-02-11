@@ -32,20 +32,20 @@ jobs:
       - run:
           name: Install SonarScanner
           command: |
-            wget http://www-eu.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
-            tar xzf apache-maven-3.5.4-bin.tar.gz
-            ln -s apache-maven-3.5.4 maven
-            wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.5.0.2216-linux.zip
-            unzip sonar-scanner-cli-4.5.0.2216-linux.zip
-            rm sonar-scanner-cli-4.5.0.2216-linux.zip
-            mvn install -DskipTests
+            # wget http://www-eu.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+            # tar xzf apache-maven-3.5.4-bin.tar.gz
+            # ln -s apache-maven-3.5.4 maven
+            # wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.5.0.2216-linux.zip
+            # unzip sonar-scanner-cli-4.5.0.2216-linux.zip
+            # rm sonar-scanner-cli-4.5.0.2216-linux.zip
+            # mvn install -DskipTests
             ls -lrt /home/circleci/project/target/
-      - run:
-          name: Analyze with SonarCloud
-          command: |
-            ./sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner \
-              -Dsonar.projectKey=saks-code-repo \
-              -Dsonar.organization=dhanu0001 \
-              -Dsonar.sources=. \
-              -Dsonar.host.url=https://sonarcloud.io \
-              -Dsonar.login=97e22ce748b6b6855d1f1fcd0e3ca2323abd0219
+      # - run:
+      #     name: Analyze with SonarCloud
+      #     command: |
+      #       ./sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner \
+      #         -Dsonar.projectKey=saks-code-repo \
+      #         -Dsonar.organization=dhanu0001 \
+      #         -Dsonar.sources=. \
+      #         -Dsonar.host.url=https://sonarcloud.io \
+      #         -Dsonar.login=97e22ce748b6b6855d1f1fcd0e3ca2323abd0219
