@@ -39,6 +39,7 @@ jobs:
             unzip sonar-scanner-cli-4.5.0.2216-linux.zip
             rm sonar-scanner-cli-4.5.0.2216-linux.zip
             export PATH=$PATH:$PWD/sonar-scanner-4.5.0.2216-linux/bin/
+            mvn test
       - run:
           name: Scan with SonarCloud
           command: |
@@ -48,5 +49,5 @@ jobs:
               -Dsonar.login=eea8bec81489972faf09e2fba4048155f45adab7 \
               -Dsonar.organization=dhanu0001 \
               -Dsonar.projectKey=dhanu0001 \
-              # -Dsonar.sources=. \
+              -Dsonar.sources=. \
               -Dsonar.host.url=https://sonarcloud.io
