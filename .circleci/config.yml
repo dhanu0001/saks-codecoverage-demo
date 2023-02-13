@@ -61,7 +61,7 @@ jobs:
               -Dsonar.sources=. \
               -Dsonar.host.url=$Host \
               -Dsonar.login=$Sonar_Token \
-              -Dsonar.sources=src/main \
+              -Dsonar.sources=src/main/java/com/visualpathit/account \
               -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
               -Dsonar.junit.reportsPath=target/surefire-reports/ \
               -Dsonar.jacoco.reportsPath=target/jacoco.exec 
