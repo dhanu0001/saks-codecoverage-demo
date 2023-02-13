@@ -42,7 +42,6 @@ jobs:
             cd /home/circleci/project/
             # mvn clean install
             # mvn clean install
-            # mvn test
             mvn install -DskipTests
             # mvn test
             mvn checkstyle:checkstyle
@@ -62,6 +61,6 @@ jobs:
               -Dsonar.sources=. \
               -Dsonar.host.url=$Host \
               -Dsonar.login=$Sonar_Token \
-              -Dsonar.sources=src/ \
-              -Dsonar.java.binaries=target/ \
+              -Dsonar.sources=src/main/webapp/ \
+              -Dsonar.java.binaries=target/classes
               ls -lrt /home/circleci/project/target/
