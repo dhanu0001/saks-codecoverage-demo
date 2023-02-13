@@ -201,15 +201,15 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>prepare-agent</id>
-                        <phase>test</phase>
-                        <goals>
+                       <id>prepare-agent</id>
+                       <phase>test</phase>
+                       <goals>
                             <goal>report</goal>
-                        </goals>
-                        <configuration>
+                       </goals>
+                       <configuration>
                             <dataFile>target/jacoco.exec</dataFile>
                             <outputDirectory>target/my-reports</outputDirectory>
-                        </configuration>
+                       </configuration>
                     </execution>
                 </executions>
         </plugin>
