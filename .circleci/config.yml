@@ -58,10 +58,10 @@ jobs:
             ./sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner \
               -Dsonar.projectKey=$Project_Key \
               -Dsonar.organization=$Organization \
-              # -Dsonar.sources=. \
+              -Dsonar.sources=. \
               -Dsonar.host.url=$Host \
               -Dsonar.login=$Sonar_Token \
-              -Dsonar.sources=src/main/java/com/visualpathit/account \
+              # -Dsonar.sources=src/main/java/com/visualpathit/account \
               -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
               -Dsonar.junit.reportsPath=target/surefire-reports/ \
               -Dsonar.jacoco.reportsPath=target/jacoco.exec 
