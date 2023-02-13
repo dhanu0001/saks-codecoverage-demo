@@ -49,7 +49,6 @@ jobs:
             mvn checkstyle:checkstyle
             curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
             ls -lrt /home/circleci/project/target/
-
             # mvn install -DskipTests
             # mvn sonar:sonar
             # ls -lrt /home/circleci/project/
