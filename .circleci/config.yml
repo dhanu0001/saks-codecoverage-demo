@@ -44,7 +44,6 @@ jobs:
             ls -lrt /home/circleci/            
             # mvn clean install
             # mvn clean install
-            mvn sonar:sonar -Dsonar.login=97e22ce748b6b6855d1f1fcd0e3ca2323abd0219 -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=saks-code-repo -Dsonar.organization=dhanu0001 -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ -Dsonar.junit.reportsPath=target/surefire-reports/ -Dsonar.jacoco.reportsPath=target/jacoco.exec -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
             mvn install -DskipTests
             # mvn test
             mvn checkstyle:checkstyle
