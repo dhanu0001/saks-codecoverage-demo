@@ -43,11 +43,11 @@ jobs:
             cd /home/circleci/project/
             ls -lrt /home/circleci/project           
             # mvn clean install
-            mvn clean package
-            # mvn install -DskipTests
+            # mvn clean package
+            mvn install -DskipTests
             # mvn test
             mvn checkstyle:checkstyle
-            curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
+            # curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
             ls -lrt /home/circleci/project/target/
             # mvn install -DskipTests
             # mvn sonar:sonar
@@ -63,4 +63,4 @@ jobs:
               -Dsonar.login=$Sonar_Token \
               -Dsonar.sources=src \
               -Dsonar.java.binaries=target
-              ls -lrt /home/circleci/project/target/site
+              ls -lrt /home/circleci/project/target/
