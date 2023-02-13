@@ -185,23 +185,44 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.2.201409121644</version>
+                <version>0.8.3</version>
                 <executions>
                     <execution>
                         <id>jacoco-initialize</id>
+                        <goals>
+                             <goal>prepare-agent</goal>
+                             
                         <phase>process-resources</phase>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>jacoco-site</id>
-                        <phase>post-integration-test</phase>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
+                     <id>post-unit-test</id>
+                     phase>test</phase>
+                     <goals>
+                         <goal>report</goal>
+                     </goals>
+                    <configuration>
+                        <!-- Sets the path to the file which contains the execution data. -->
+                        <dataFile>target/jacoco.exec</dataFile>
+                        <!-- Sets the output directory for the code coverage report. -->
+                        <outputDirectory>target/my-reports</outputDirectory>
+                    </configuration>
+                  </execution>
+             </executions>
+             <configuration>
+                 <systemPropertyVariables>
+                     <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
+                 </systemPropertyVariables>
+             </configuration>   
         </plugin>
         
         </plugins>
