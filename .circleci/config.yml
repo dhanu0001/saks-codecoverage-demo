@@ -41,7 +41,8 @@ jobs:
             export PATH=$PATH:/sonar-scanner-3.3.0.1492-linux/bin/
             cd /home/circleci/project/
             # mvn clean install
-            mvn install -DskipTests
+            mvn clean
+            # mvn install -DskipTests
             mvn checkstyle:checkstyle
             ls -lrt /home/circleci/project/target/
 
