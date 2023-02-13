@@ -57,6 +57,6 @@ jobs:
               -Dsonar.sources=. \
               -Dsonar.host.url=$Host \
               -Dsonar.login=$Sonar_Token \
-              -Dsonar.sources=src/main/java/ \
+              -Dsonar.sources=src/main/webapp/ \
               -Dsonar.java.binaries=target/classes
               ls -lrt /home/circleci/project/target/
