@@ -222,7 +222,6 @@
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
-        
         </plugins>
     </build>
   <repositories>
