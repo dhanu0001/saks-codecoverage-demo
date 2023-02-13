@@ -39,7 +39,9 @@ jobs:
             unzip sonar-scanner-cli-4.5.0.2216-linux.zip
             rm sonar-scanner-cli-4.5.0.2216-linux.zip
             export PATH=$PATH:/sonar-scanner-3.3.0.1492-linux/bin/
-            cd /home/circleci/project/
+            # cd /home/circleci/project/
+            cd /home/circleci/
+            ls -lrt /home/circleci/            
             # mvn clean install
             # mvn clean install
             mvn install -DskipTests
