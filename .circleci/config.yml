@@ -46,6 +46,7 @@ jobs:
             mvn clean package
             # mvn install -DskipTests
             mvn test
+            mvn compile
             mvn checkstyle:checkstyle
             # curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
             ls -lrt /home/circleci/project/target/
