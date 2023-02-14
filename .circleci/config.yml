@@ -65,4 +65,4 @@ jobs:
               -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
               -Dsonar.junit.reportsPath=target/surefire-reports/ \
               -Dsonar.jacoco.reportsPath=target/jacoco.exec 
-              ls -lrt /home/circleci/project/target/
+              ls -lrt /home/circleci/project/target/my-reports
