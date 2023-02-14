@@ -58,7 +58,7 @@ jobs:
             ./sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner \
               -Dsonar.projectKey=$Project_Key \
               -Dsonar.organization=$Organization \
-              -Dsonar.sources=. \
+              -Dsonar.sources=root \
               -Dsonar.host.url=$Host \
               -Dsonar.login=$Sonar_Token \
               # -Dsonar.sources=src/main/java/com/visualpathit/account \
