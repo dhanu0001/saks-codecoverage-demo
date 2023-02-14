@@ -43,7 +43,7 @@ jobs:
             cd /home/circleci/project/
             ls -lrt /home/circleci/project           
             mvn clean install
-            mvn clean package
+            # mvn clean package
             # mvn install -DskipTests
             mvn test
             mvn checkstyle:checkstyle
