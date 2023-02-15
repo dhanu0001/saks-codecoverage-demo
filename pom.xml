@@ -5,7 +5,7 @@
     <artifactId>vprofile</artifactId>
     <packaging>war</packaging>
     <version>v2</version>
-    <name>Visualpathit VProfile Webapp</name>
+    <name>Saks-CodeAnalysis-demo</name>
     <url>http://maven.apache.org</url>
     <properties>
     <timestamp>${maven.build.timestamp}</timestamp>
