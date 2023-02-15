@@ -49,7 +49,7 @@ jobs:
             mvn checkstyle:checkstyle
             mvn clean verify sonar:sonar -Dsonar.login=$Sonar_Token -Dsonar.host.url=$Host -Dsonar.organization=$Organization -Dsonar.projectKey=$Project_Key 
             curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
-            ls -lrt /home/circleci/project/target/
+            ls -lrt /home/circleci/project/target/sonar
             # mvn install -DskipTests
             # mvn sonar:sonar
             # ls -lrt /home/circleci/project/sonar
