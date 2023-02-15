@@ -47,7 +47,7 @@ jobs:
             # mvn install -DskipTests
             mvn test
             mvn checkstyle:checkstyle
-            mvn sonar:sonar -Dsonar.host.url=$Host -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/
+            mvn clean verify sonar:sonar -Dsonar.login=$Sonar_Token
             # curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project >result.json
             ls -lrt /home/circleci/project/target/
             # mvn install -DskipTests
