@@ -188,10 +188,18 @@
                 <version>0.8.3</version>
                 <executions>
                     <execution>
-                        <id>prepare-agent</id>
+                        <id>jacoco-initialize</id>
+                        <phase>process-resources</phase>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
+                                 
+<!--                     </execution>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals> -->
                     </execution>
                     <execution>
                         <id>report</id>
