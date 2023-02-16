@@ -5,10 +5,10 @@ jobs:
     docker:
       - image: cimg/openjdk:11.0.16
       # - image: circleci/node:14
-    environment:
-      SONAR_TOKEN: 97e22ce748b6b6855d1f1fcd0e3ca2323abd0219
-      SONAR_PROJECT_KEY: saks-code-repo
-      SONAR_ORGANIZATION: dhanu0001
+    # environment:
+    #   SONAR_TOKEN: 97e22ce748b6b6855d1f1fcd0e3ca2323abd0219
+    #   SONAR_PROJECT_KEY: saks-code-repo
+    #   SONAR_ORGANIZATION: dhanu0001
     steps:
       - checkout
       # - run:
