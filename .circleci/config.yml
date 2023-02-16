@@ -53,7 +53,7 @@ jobs:
             cat 
             # mvn install -DskipTests
             # mvn sonar:sonar
-            # ls -lrt /home/circleci/project/sonar
+            # ls -lrt /home/circleci/project/sonar 
       # - run:
       #     name: Analyze with SonarCloud
       #     command: |
