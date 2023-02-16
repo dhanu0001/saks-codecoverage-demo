@@ -69,4 +69,4 @@ jobs:
               -Dsonar.junit.reportsPath=target/surefire-reports/ \
               -Dsonar.jacoco.reportsPath=target/jacoco.exec 
               ls -lrt /home/circleci/project/target/my-reports
-              cat /home/circleci/project/target/my-reports/jacoco.xml 
+              cat /home/circleci/project/target/my-reports/jacoco.xml
